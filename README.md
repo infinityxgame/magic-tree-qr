@@ -17,7 +17,7 @@
 - 📷 **Reconocimiento y generación de códigos QR versátiles**:
    - **Introducción de texto/URL**: admite la generación de códigos QR a partir de texto de cualquier longitud, caracteres UTF-8 y URL;
    - **Reconocimiento de imágenes cargadas**: con el motor frontend puro jsQR integrado, basta con hacer clic en el ícono de la cámara para seleccionar una imagen de código QR y obtener su análisis en cuestión de segundos;
-   - **Pegar captura de pantalla (Ctrl+V)**: no es necesario guardar el archivo; después de hacer una captura de pantalla en WeChat o en el sistema, simplemente presione `Ctrl+V` en la página para generarla con un solo clic;
+   - **Pegar captura de pantalla (Ctrl+V)**: no es necesario guardar el archivo; después de hacer una captura de pantalla en cualquier aplicación o en el sistema, simplemente presione `Ctrl+V` en la página para generarla con un solo clic;
    - **Compatibilidad con arrastrar y soltar**: arrastre el archivo de imagen del código QR para analizarlo directamente.
 - 🎯 **Cambio fluido entre las vistas 3D y 2D**:
    - Al hacer clic en el árbol 3D, se realiza una transición suave a la vista 2D directamente encima. El alto contraste garantiza **una tasa de reconocimiento del 100 % al escanear el código QR**;
@@ -67,7 +67,7 @@ Los resultados de la compilación se enviarán al directorio `dist/`.
 ## 📜 Reconocimientos y agradecimientos
 
 - Reconocimiento:[ icqr](https://icqr.com)
-- Traducción al chino y reestructuración de invierno:[xscanzm](https://github.com/xscanzm)
+- Proyecto original y reestructuración de invierno: [xscanzm](https://github.com/xscanzm). Adaptación al español: [infinityxgame](https://github.com/infinityxgame).
 
 ---
 
