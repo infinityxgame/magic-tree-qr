@@ -19160,10 +19160,41 @@ function _Component() {
     if (!_0x4755e1) {
       return null;
     }
+    let _0xsourceBlob;
+    let _0ximageUrl;
     try {
-      return await (await fetch(_0x4755e1)).blob();
+      _0xsourceBlob = await (await fetch(_0x4755e1)).blob();
+      _0ximageUrl = URL.createObjectURL(_0xsourceBlob);
+      const _0ximage = new Image();
+      await new Promise((_0xresolve, _0xreject) => {
+        _0ximage.onload = _0xresolve;
+        _0ximage.onerror = _0xreject;
+        _0ximage.src = _0ximageUrl;
+      });
+      const _0xwidth = _0ximage.naturalWidth;
+      const _0xheight = _0ximage.naturalHeight;
+      if (!_0xwidth || !_0xheight) {
+        return _0xsourceBlob;
+      }
+      // The QR scene is rendered centered; crop a square from the shorter canvas dimension.
+      const _0xside = Math.max(1, Math.floor(Math.min(_0xwidth, _0xheight) * 0.66));
+      const _0xleft = Math.max(0, Math.floor((_0xwidth - _0xside) / 2));
+      const _0xtop = Math.max(0, Math.min(_0xheight - _0xside, Math.floor((_0xheight - _0xside) / 2 - _0xheight * 0.055)));
+      const _0xcropCanvas = document.createElement("canvas");
+      _0xcropCanvas.width = _0xside;
+      _0xcropCanvas.height = _0xside;
+      const _0xcropContext = _0xcropCanvas.getContext("2d");
+      if (!_0xcropContext) {
+        return _0xsourceBlob;
+      }
+      _0xcropContext.drawImage(_0ximage, _0xleft, _0xtop, _0xside, _0xside, 0, 0, _0xside, _0xside);
+      return await new Promise(_0xresolve => _0xcropCanvas.toBlob(_0xresolve, "image/png")) || _0xsourceBlob;
     } catch {
-      return null;
+      return _0xsourceBlob || null;
+    } finally {
+      if (_0ximageUrl) {
+        URL.revokeObjectURL(_0ximageUrl);
+      }
     }
   }, [_0x1f990f]);
   const _0x274176 = async () => {
@@ -19204,14 +19235,16 @@ function _Component() {
     _0x44580a(null);
   };
   const _0x228c85 = async () => {
-    const _0x4ad5b9 = _0x4457f4.current || _0x1f990f;
+    const _0x4ad5b9 = await _0x4694ab();
     if (!_0x4ad5b9) {
       return;
     }
+    const _0xdownloadUrl = URL.createObjectURL(_0x4ad5b9);
     const _0x10f4af = document.createElement("a");
-    _0x10f4af.href = _0x4ad5b9;
+    _0x10f4af.href = _0xdownloadUrl;
     _0x10f4af.download = "tree-qr.png";
     _0x10f4af.click();
+    setTimeout(() => URL.revokeObjectURL(_0xdownloadUrl), 1000);
     _0xdd5148(false);
     _0x44580a(null);
   };
