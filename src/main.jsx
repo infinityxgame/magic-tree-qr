@@ -17758,27 +17758,27 @@ var ze = a((_0x5f402a, _0x41e66e) => {
   _0x41e66e.exports = Pe();
 })();
 var Me = [{
-  label: "默认",
+  label: "Predeterminado",
   color: "#e8a0b0",
   rgb: [0, 0, 0]
 }, {
-  label: "薰衣草紫",
+  label: "Lavanda",
   color: "#9b6fc0",
   rgb: [0.58, 0.3, 0.82]
 }, {
-  label: "珊瑚红",
+  label: "Rojo coral",
   color: "#e83030",
   rgb: [0.95, 0.18, 0.15]
 }, {
-  label: "金黄",
+  label: "Dorado",
   color: "#e8a800",
   rgb: [0.95, 0.68, 0.02]
 }, {
-  label: "天蓝",
+  label: "Azul cielo",
   color: "#3a8ef5",
   rgb: [0.22, 0.55, 0.96]
 }, {
-  label: "雪白",
+  label: "Blanco nieve",
   color: "#dfe6e9",
   rgb: [0.87, 0.9, 0.91]
 }];
@@ -17816,16 +17816,16 @@ var Ae = {
   whatsapp: <svg width={16} height={16} viewBox="0 0 24 24" fill="currentColor" aria-hidden={true}><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
 };
 var Ne = [{
-  label: "春季",
+  label: "Primavera",
   icon: Ae.spring
 }, {
-  label: "夏季",
+  label: "Verano",
   icon: Ae.summer
 }, {
-  label: "秋季",
+  label: "Otoño",
   icon: Ae.fall
 }, {
-  label: "冬季",
+  label: "Invierno",
   icon: Ae.winter
 }];
 var Re = ["/audio/spring.mp3", "/audio/summer.mp3", "/audio/autumn.mp3", "/audio/winter.mp3"];
@@ -17888,7 +17888,7 @@ function Ue(_0x371247) {
     if (_0xccaa7a.size > 41) {
       return {
         valid: false,
-        error: "内容过长，无法生成树状二维码（建议精简字数）"
+        error: "El contenido es demasiado largo para generar el árbol QR. Prueba a reducir el texto."
       };
     } else {
       return {
@@ -17899,7 +17899,7 @@ function Ue(_0x371247) {
   } catch {
     return {
       valid: false,
-      error: "内容格式不支持或超出限制"
+      error: "El formato del contenido no es compatible o supera el límite permitido."
     };
   }
 }
@@ -18024,13 +18024,13 @@ function _Component() {
             _0x182d75("");
           } else {
             _0x5559b9(true);
-            _0x182d75(error || "识别到的内容过长");
+            _0x182d75(error || "El contenido detectado es demasiado largo.");
           }
         } else {
-          alert("未在图片中检测到有效的二维码，请尝试上传清晰的二维码图片");
+          alert("No se detectó ningún código QR válido en la imagen. Intenta subir una imagen más nítida.");
         }
       };
-      img.onerror = () => alert("无法加载该图片，请重试");
+      img.onerror = () => alert("No se pudo cargar la imagen. Inténtalo de nuevo.");
       img.src = e.target.result;
     };
     reader.readAsDataURL(file);
@@ -18206,7 +18206,7 @@ function _Component() {
   const _0x175ba0 = _0x1bb750.width >= 900;
   const _0x1487f1 = !_0x25978d && _0x3744d8 && !!_0x3e9140;
   const _0x32e13e = _e && _0x1bb750.isMobile && _0xd36b8b === 0 ? 56 : 0;
-  const _0x1ecde7 = _0x1487f1 ? _0x3e9140 : _0x446d01 ? "点击查看3D树" : "点击树木查看扫码二维码";
+  const _0x1ecde7 = _0x1487f1 ? _0x3e9140 : _0x446d01 ? "Haz clic para ver el árbol 3D" : "Haz clic en el árbol para ver el código QR";
   (0, m.useEffect)(() => {
     if (!_0x1bb750.isMobile || !_0x469f6b) {
       return;
@@ -18617,7 +18617,7 @@ function _Component() {
           });
           const _0x2d4d3b = be(_0x2cc8ca, _0x1614a7, _0xc01810, {
             vertex: "\n" + ye + "\n\nstruct FlowerOutput {\n  @builtin(position) position: vec4f,\n  @location(0) petalT: f32,\n  @location(1) normalX: f32,\n  @location(2) normalY: f32,\n  @location(3) normalZ: f32,\n  @location(4) seed: f32,\n  @location(5) isCenter: f32,\n}\n\n@group(0) @binding(0) var<uniform> uniforms: Uniforms;\n@group(0) @binding(1) var<storage, read> flowerPositions: array<vec4f>;\n\n@vertex\nfn main(@builtin(vertex_index) vertexIndex: u32) -> FlowerOutput {\n  var output: FlowerOutput;\n\n  let vertsPerFlower = 150u;\n  let flowerIdx = vertexIndex / vertsPerFlower;\n  let localVert = vertexIndex % vertsPerFlower;\n\n  let flowerData = flowerPositions[flowerIdx];\n  let col = flowerData.x;\n  let row = flowerData.y;\n  let topY = flowerData.z;\n  let rawSeed = flowerData.w;\n\n  let isLeaf = step(1.0, rawSeed);\n  let seed = rawSeed - isLeaf;\n  output.seed = rawSeed;\n\n  let progress = uniforms.progress;\n\n  let vis = smoothstep(0.0, 0.6, 1.0 - progress);\n  if (vis < 0.01) {\n    output.position = vec4f(0.0, 0.0, -10.0, 1.0);\n    return output;\n  }\n\n  let blockSize = f32(" + ke + ");\n  let gridSize = uniforms.gridSize;\n  let halfGrid = gridSize * blockSize * 0.5;\n\n  // In summer, cull ~60% of low-lying ground flowers\n  let season = uniforms.season;\n  let groundThreshold = blockSize * gridSize * 0.22;\n  if (season > 0.5 && season < 1.5 && topY < groundThreshold && fract(seed * 7.13) < 0.82) {\n    output.position = vec4f(0.0, 0.0, -10.0, 1.0);\n    return output;\n  }\n\n  let centerX = col * blockSize - halfGrid;\n  let centerY = topY;\n  let centerZ = row * blockSize - halfGrid;\n\n  let time = uniforms.time;\n  let isGroundPetal = step(topY, blockSize * 2.5);\n  let windFactor = (1.0 - isGroundPetal) * vis;\n  let windBase = sin(time * 0.45 + col * 0.25 + row * 0.15) * 0.028;\n  let windTurb = sin(time * 1.1 + col * 0.8 + row * 0.6) * 0.008;\n  let swayX = (windBase + windTurb) * windFactor;\n  let swayZ = sin(time * 0.35 + col * 0.15 + row * 0.25) * 0.018 * windFactor;\n\n  let baseScale = blockSize * (0.7 + seed * 0.3) * vis;\n  let flowerScale = mix(baseScale, baseScale * 0.9, isLeaf);\n  let petalLength = mix(flowerScale * 0.85, flowerScale * 1.3, isLeaf);\n  let petalWidth = mix(flowerScale * 0.38, flowerScale * 0.18, isLeaf);\n  let curlHeight = mix(blockSize * 0.18, blockSize * 0.08, isLeaf) * vis;\n  let centerRadius = mix(blockSize * 0.12, blockSize * 0.04, isLeaf) * vis;\n\n  let baseRotation = seed * 6.28318;\n\n  let tiltAngle = (seed * 0.25 + 0.05) * (1.0 - isLeaf * 0.5);\n  let tiltDir = seed * 6.28318 * 3.17;\n  let tiltCos = cos(tiltAngle);\n  let tiltSin = sin(tiltAngle);\n  let tiltAxisX = cos(tiltDir);\n  let tiltAxisZ = sin(tiltDir);\n\n  var localPos = vec3f(0.0);\n  var normal = vec3f(0.0, 1.0, 0.0);\n  output.isCenter = 0.0;\n  output.petalT = 0.0;\n\n  if (localVert < 120u) {\n    let petalIdx = localVert / 24u;\n    let segVert = localVert % 24u;\n    let segIdx = segVert / 6u;\n    let triVert = segVert % 6u;\n\n    let petalAngle = f32(petalIdx) * 1.25664 + baseRotation;\n    let cosA = cos(petalAngle);\n    let sinA = sin(petalAngle);\n\n    var petalScale = 1.0;\n    if (isLeaf > 0.5 && petalIdx >= 3u) {\n      petalScale = 0.0;\n    }\n\n    var rowIdx: u32;\n    var side: f32;\n    if (triVert == 0u) { rowIdx = segIdx;     side = -1.0; }\n    else if (triVert == 1u) { rowIdx = segIdx;     side =  1.0; }\n    else if (triVert == 2u) { rowIdx = segIdx + 1u; side = -1.0; }\n    else if (triVert == 3u) { rowIdx = segIdx + 1u; side = -1.0; }\n    else if (triVert == 4u) { rowIdx = segIdx;     side =  1.0; }\n    else { rowIdx = segIdx + 1u; side =  1.0; }\n\n    let t = f32(rowIdx) * 0.25;\n    output.petalT = t;\n\n    let dist = t * petalLength * petalScale;\n    let hw = petalWidth * sin(t * 3.14159) * sqrt(1.0 - t * 0.3) * petalScale;\n    let curl = curlHeight * 4.0 * t * (1.0 - t);\n\n    let alongX = dist * cosA;\n    let alongZ = dist * sinA;\n    let perpX = side * hw * (-sinA);\n    let perpZ = side * hw * cosA;\n\n    localPos = vec3f(\n      centerX + alongX + perpX + swayX,\n      centerY + curl,\n      centerZ + alongZ + perpZ + swayZ,\n    );\n\n    let curlSlope = curlHeight * 4.0 * (1.0 - 2.0 * t);\n    normal = normalize(vec3f(\n      -curlSlope * cosA + side * 0.2 * sinA,\n      1.0,\n      -curlSlope * sinA - side * 0.2 * cosA,\n    ));\n  } else {\n    output.isCenter = 1.0;\n    let diskVert = localVert - 120u;\n    let triIdx = diskVert / 3u;\n    let triV = diskVert % 3u;\n\n    let centerElevation = curlHeight * 0.8;\n\n    if (triV == 0u) {\n      localPos = vec3f(centerX + swayX, centerY + centerElevation, centerZ + swayZ);\n      normal = vec3f(0.0, 1.0, 0.0);\n    } else {\n      let angleIdx = select(triIdx, triIdx + 1u, triV == 2u);\n      let angle = f32(angleIdx) * 0.62832 + baseRotation;\n      localPos = vec3f(\n        centerX + cos(angle) * centerRadius + swayX,\n        centerY + centerElevation * 0.9,\n        centerZ + sin(angle) * centerRadius + swayZ,\n      );\n      normal = vec3f(0.0, 1.0, 0.0);\n    }\n  }\n\n  // Apply tilt (Rodrigues rotation)\n  let offX = localPos.x - centerX - swayX;\n  let offY = localPos.y - centerY;\n  let offZ = localPos.z - centerZ - swayZ;\n\n  let dotAO = tiltAxisX * offX + tiltAxisZ * offZ;\n  let crossX = -tiltAxisZ * offY;\n  let crossY = tiltAxisZ * offX - tiltAxisX * offZ;\n  let crossZ = tiltAxisX * offY;\n\n  let rotX = offX * tiltCos + crossX * tiltSin + tiltAxisX * dotAO * (1.0 - tiltCos);\n  let rotY = offY * tiltCos + crossY * tiltSin;\n  let rotZ = offZ * tiltCos + crossZ * tiltSin + tiltAxisZ * dotAO * (1.0 - tiltCos);\n\n  localPos = vec3f(\n    centerX + swayX + rotX,\n    centerY + rotY,\n    centerZ + swayZ + rotZ,\n  );\n\n  // Also rotate normal\n  let nDotA = tiltAxisX * normal.x + tiltAxisZ * normal.z;\n  let nCrossX = -tiltAxisZ * normal.y;\n  let nCrossY = tiltAxisZ * normal.x - tiltAxisX * normal.z;\n  let nCrossZ = tiltAxisX * normal.y;\n  normal = normalize(vec3f(\n    normal.x * tiltCos + nCrossX * tiltSin + tiltAxisX * nDotA * (1.0 - tiltCos),\n    normal.y * tiltCos + nCrossY * tiltSin,\n    normal.z * tiltCos + nCrossZ * tiltSin + tiltAxisZ * nDotA * (1.0 - tiltCos),\n  ));\n\n  // Scale toward center for 2D transition\n  localPos = vec3f(\n    centerX + swayX + (localPos.x - centerX - swayX) * vis,\n    centerY + (localPos.y - centerY) * vis,\n    centerZ + swayZ + (localPos.z - centerZ - swayZ) * vis,\n  );\n\n  output.normalX = normal.x;\n  output.normalY = normal.y;\n  output.normalZ = normal.z;\n\n  " + we() + "\n  \n  output.position = vec4f(\n    (ry_x + xOffsetScene) * scaleX,\n    (rx_y + yOffsetScene) * scaleY,\n    rx_z * 0.01 + 0.5,\n    1.0\n  );\n\n  return output;\n}\n",
-            fragment: "\n" + ye + "\n\nstruct FlowerInput {\n  @location(0) petalT: f32,\n  @location(1) normalX: f32,\n  @location(2) normalY: f32,\n  @location(3) normalZ: f32,\n  @location(4) seed: f32,\n  @location(5) isCenter: f32,\n}\n\n@group(0) @binding(0) var<uniform> uniforms: Uniforms;\n\n" + xe + "\n\n@fragment\nfn main(input: FlowerInput) -> @location(0) vec4f {\n  let N = normalize(vec3f(input.normalX, input.normalY, input.normalZ));\n  let t = input.petalT;\n  let rawSeed = input.seed;\n  let origIsLeaf = step(1.0, rawSeed);\n  let seed = rawSeed - origIsLeaf;\n\n  let season = uniforms.season;\n\n  let leafChance = fract(seed * 4.37);\n  var isLeaf = origIsLeaf;\n  let isGroundFlower = step(input.petalT, 0.01) * (1.0 - origIsLeaf);\n\n  if (season > 0.5 && season < 1.5) {\n    isLeaf = 1.0;\n  } else if (season > 1.5 && season < 2.5) {\n    isLeaf = 1.0;\n    if (leafChance < 0.40) { discard; }\n  } else if (season > 2.5) {\n    isLeaf = 1.0;\n    if (leafChance < 0.15) { discard; }\n  }\n\n  var leafDark   = vec3f(0.25, 0.40, 0.22);\n  var leafMedium = vec3f(0.40, 0.55, 0.30);\n  var leafLight  = vec3f(0.55, 0.68, 0.38);\n  var leafOlive  = vec3f(0.48, 0.52, 0.28);\n\n  if (season > 0.5 && season < 1.5) {\n    leafDark   = vec3f(0.03, 0.12, 0.01);\n    leafMedium = vec3f(0.06, 0.20, 0.02);\n    leafLight  = vec3f(0.12, 0.28, 0.03);\n    leafOlive  = vec3f(0.08, 0.18, 0.02);\n  } else if (season > 1.5 && season < 2.5) {\n    leafDark   = vec3f(0.42, 0.12, 0.05);\n    leafMedium = vec3f(0.58, 0.21, 0.07);\n    leafLight  = vec3f(0.70, 0.34, 0.09);\n    leafOlive  = vec3f(0.62, 0.40, 0.07);\n  } else if (season > 2.5) {\n    // Deep winter pine needle greens with rich depth\n    leafDark   = vec3f(0.08, 0.18, 0.14);\n    leafMedium = vec3f(0.16, 0.30, 0.24);\n    leafLight  = vec3f(0.26, 0.44, 0.36);\n    leafOlive  = vec3f(0.20, 0.36, 0.28);\n  }\n\n  var shadeDeep   = vec3f(0.85, 0.22, 0.38);\n  var shadeMedium = vec3f(0.92, 0.40, 0.52);\n  var shadeLight  = vec3f(0.96, 0.58, 0.66);\n  var shadePale   = vec3f(0.98, 0.75, 0.80);\n  var shadeBlush  = vec3f(0.97, 0.65, 0.72);\n  var shadeWhite  = vec3f(0.99, 0.88, 0.90);\n  var stamenGold  = vec3f(0.92, 0.78, 0.35);\n\n  if (season > 0.5 && season < 1.5) {\n    shadeDeep   = vec3f(0.88, 0.90, 0.82);\n    shadeMedium = vec3f(0.92, 0.93, 0.85);\n    shadeLight  = vec3f(0.95, 0.95, 0.88);\n    shadePale   = vec3f(0.96, 0.96, 0.92);\n    shadeBlush  = vec3f(0.93, 0.94, 0.86);\n    shadeWhite  = vec3f(0.97, 0.97, 0.94);\n    stamenGold  = vec3f(0.82, 0.78, 0.35);\n  } else if (season > 1.5 && season < 2.5) {\n    shadeDeep   = vec3f(0.52, 0.08, 0.03);\n    shadeMedium = vec3f(0.64, 0.18, 0.05);\n    shadeLight  = vec3f(0.72, 0.32, 0.07);\n    shadePale   = vec3f(0.78, 0.46, 0.12);\n    shadeBlush  = vec3f(0.68, 0.25, 0.07);\n    shadeWhite  = vec3f(0.80, 0.58, 0.20);\n    stamenGold  = vec3f(0.62, 0.42, 0.08);\n  } else if (season > 2.5) {\n    // Winter Red Holly / Plum Blossom accent dots\n    shadeDeep   = vec3f(0.70, 0.12, 0.16);\n    shadeMedium = vec3f(0.84, 0.18, 0.24);\n    shadeLight  = vec3f(0.92, 0.28, 0.32);\n    shadePale   = vec3f(0.95, 0.42, 0.46);\n    shadeBlush  = vec3f(0.88, 0.22, 0.26);\n    shadeWhite  = vec3f(0.98, 0.60, 0.64);\n    stamenGold  = vec3f(0.88, 0.75, 0.25);\n  }\n\n  var baseColor = vec3f(0.0);\n\n  if (isLeaf > 0.5) {\n    let leafTier = fract(seed * 5.17);\n    var leafBase: vec3f;\n    var leafTip: vec3f;\n    if (leafTier < 0.35) { leafBase = leafDark; leafTip = leafMedium; }\n    else if (leafTier < 0.6) { leafBase = leafMedium; leafTip = leafLight; }\n    else if (leafTier < 0.85) { leafBase = leafOlive; leafTip = leafLight; }\n    else { leafBase = leafDark; leafTip = leafOlive; }\n    baseColor = mix(leafBase, leafTip, t);\n\n    // In Winter: Top surfaces receive beautiful pure snow caps (雪盖松针)\n    if (season > 2.5) {\n      let snowCap = smoothstep(0.15, 0.75, N.y) * (0.65 + fract(seed * 7.13) * 0.35);\n      let snowCol = vec3f(0.93, 0.95, 0.98);\n      baseColor = mix(baseColor, snowCol, snowCap * 0.82);\n      // Frost rim on leaf edge\n      baseColor = mix(baseColor, vec3f(0.86, 0.92, 0.98), t * 0.35);\n    }\n  } else if (input.isCenter > 0.5) {\n    let goldVar = fract(seed * 13.3) * 0.15;\n    let goldColor = stamenGold * (0.9 + goldVar);\n    let centerLeaf = mix(leafDark, leafMedium, fract(seed * 5.17));\n    baseColor = mix(goldColor, centerLeaf, min(season, 1.0));\n    if (season > 2.5) {\n      baseColor = mix(stamenGold, vec3f(0.92, 0.95, 0.98), 0.35);\n    }\n  } else {\n    if (season > 0.5 && season < 2.5) {\n      let leafTier2 = fract(seed * 8.13);\n      var lBase: vec3f;\n      var lTip: vec3f;\n      if (leafTier2 < 0.3) { lBase = leafDark; lTip = leafMedium; }\n      else if (leafTier2 < 0.6) { lBase = leafMedium; lTip = leafLight; }\n      else if (leafTier2 < 0.85) { lBase = leafOlive; lTip = leafLight; }\n      else { lBase = leafDark; lTip = leafOlive; }\n      baseColor = mix(lBase, lTip, t);\n    } else if (season > 2.5) {\n      // Winter snow blooms\n      let tierW = fract(seed * 7.31);\n      var pBase = vec3f(0.12, 0.24, 0.18);\n      var pTip = vec3f(0.92, 0.95, 0.98);\n      baseColor = mix(pBase, pTip, smoothstep(0.1, 0.8, t + N.y * 0.4));\n    } else {\n      let tier = fract(seed * 7.31);\n      var petalBase: vec3f;\n      var petalTip: vec3f;\n      if (tier < 0.2) { petalBase = shadeDeep; petalTip = shadeMedium; }\n      else if (tier < 0.35) { petalBase = shadeMedium; petalTip = shadeLight; }\n      else if (tier < 0.50) { petalBase = shadeLight; petalTip = shadePale; }\n      else if (tier < 0.65) { petalBase = shadeBlush; petalTip = shadePale; }\n      else if (tier < 0.80) { petalBase = shadePale; petalTip = shadeWhite; }\n      else { petalBase = shadeDeep; petalTip = shadeBlush; }\n      baseColor = mix(petalBase, petalTip, t);\n\n      let veinT = abs(t - 0.5) * 2.0;\n      let veinDarken = 1.0 - (1.0 - veinT) * 0.08;\n      baseColor = baseColor * veinDarken;\n    }\n  }\n\n  let customStrength = uniforms.customStrength;\n  if (customStrength > 0.01) {\n    let customCol = vec3f(uniforms.customR, uniforms.customG, uniforms.customB);\n    let luma = dot(baseColor, vec3f(0.299, 0.587, 0.114));\n    let baseLuma = dot(customCol, vec3f(0.299, 0.587, 0.114));\n    let lumaDelta = luma - 0.5;\n    let tinted = customCol * (0.7 + lumaDelta * 1.2) + vec3f(lumaDelta * 0.15);\n    baseColor = mix(baseColor, tinted, customStrength);\n  }\n\n  const sunDir = vec3f(-0.405616, 0.861934, -0.304212);\n  let sunColor = vec3f(1.20, 1.20, 1.20);\n  let ambient = vec3f(0.28, 0.28, 0.30);\n  let NdotL = max(dot(N, sunDir), 0.0);\n\n  let NdotLBack = max(dot(-N, sunDir), 0.0);\n  let sssColor = mix(vec3f(1.0, 0.55, 0.65), vec3f(0.6, 0.8, 0.4), isLeaf);\n  let subsurface = NdotLBack * 0.22 * sssColor;\n\n  let skyFill = vec3f(0.90, 0.85, 0.88);\n  let skyContrib = max(N.y, 0.0) * 0.12 * skyFill;\n\n  let depthDarken = mix(0.92, 1.0, fract(seed * 11.3));\n  let undersideDarken = mix(0.55, 1.0, max(N.y, 0.0)) * depthDarken;\n\n  const viewDir = vec3f(0.398015, 0.597022, 0.696526);\n  let rimDot = 1.0 - max(dot(N, viewDir), 0.0);\n  let rim = pow(rimDot, 3.0) * 0.10 * vec3f(1.0, 0.85, 0.88);\n\n  let lit = baseColor * undersideDarken * (ambient + sunColor * NdotL * 0.88) + subsurface + skyContrib + rim;\n\n  let hdr = acesFilm(lit * 1.05);\n  var ldr = pow(hdr, vec3f(1.0 / 2.2));\n\n  let gray = dot(ldr, vec3f(0.299, 0.587, 0.114));\n  ldr = mix(vec3f(gray), ldr, 1.9);\n\n  if (season < 0.5 && isLeaf < 0.5) {\n    let qrDarken = uniforms.progress * uniforms.progress;\n    let brightness = dot(ldr, vec3f(0.299, 0.587, 0.114));\n    let extraDark = mix(0.55, 0.42, smoothstep(0.5, 0.8, brightness) * customStrength);\n    ldr = ldr * mix(1.0, extraDark, qrDarken);\n  }\n\n  return vec4f(ldr, 1.0);\n}\n",
+            fragment: "\n" + ye + "\n\nstruct FlowerInput {\n  @location(0) petalT: f32,\n  @location(1) normalX: f32,\n  @location(2) normalY: f32,\n  @location(3) normalZ: f32,\n  @location(4) seed: f32,\n  @location(5) isCenter: f32,\n}\n\n@group(0) @binding(0) var<uniform> uniforms: Uniforms;\n\n" + xe + "\n\n@fragment\nfn main(input: FlowerInput) -> @location(0) vec4f {\n  let N = normalize(vec3f(input.normalX, input.normalY, input.normalZ));\n  let t = input.petalT;\n  let rawSeed = input.seed;\n  let origIsLeaf = step(1.0, rawSeed);\n  let seed = rawSeed - origIsLeaf;\n\n  let season = uniforms.season;\n\n  let leafChance = fract(seed * 4.37);\n  var isLeaf = origIsLeaf;\n  let isGroundFlower = step(input.petalT, 0.01) * (1.0 - origIsLeaf);\n\n  if (season > 0.5 && season < 1.5) {\n    isLeaf = 1.0;\n  } else if (season > 1.5 && season < 2.5) {\n    isLeaf = 1.0;\n    if (leafChance < 0.40) { discard; }\n  } else if (season > 2.5) {\n    isLeaf = 1.0;\n    if (leafChance < 0.15) { discard; }\n  }\n\n  var leafDark   = vec3f(0.25, 0.40, 0.22);\n  var leafMedium = vec3f(0.40, 0.55, 0.30);\n  var leafLight  = vec3f(0.55, 0.68, 0.38);\n  var leafOlive  = vec3f(0.48, 0.52, 0.28);\n\n  if (season > 0.5 && season < 1.5) {\n    leafDark   = vec3f(0.03, 0.12, 0.01);\n    leafMedium = vec3f(0.06, 0.20, 0.02);\n    leafLight  = vec3f(0.12, 0.28, 0.03);\n    leafOlive  = vec3f(0.08, 0.18, 0.02);\n  } else if (season > 1.5 && season < 2.5) {\n    leafDark   = vec3f(0.42, 0.12, 0.05);\n    leafMedium = vec3f(0.58, 0.21, 0.07);\n    leafLight  = vec3f(0.70, 0.34, 0.09);\n    leafOlive  = vec3f(0.62, 0.40, 0.07);\n  } else if (season > 2.5) {\n    // Deep winter pine needle greens with rich depth\n    leafDark   = vec3f(0.08, 0.18, 0.14);\n    leafMedium = vec3f(0.16, 0.30, 0.24);\n    leafLight  = vec3f(0.26, 0.44, 0.36);\n    leafOlive  = vec3f(0.20, 0.36, 0.28);\n  }\n\n  var shadeDeep   = vec3f(0.85, 0.22, 0.38);\n  var shadeMedium = vec3f(0.92, 0.40, 0.52);\n  var shadeLight  = vec3f(0.96, 0.58, 0.66);\n  var shadePale   = vec3f(0.98, 0.75, 0.80);\n  var shadeBlush  = vec3f(0.97, 0.65, 0.72);\n  var shadeWhite  = vec3f(0.99, 0.88, 0.90);\n  var stamenGold  = vec3f(0.92, 0.78, 0.35);\n\n  if (season > 0.5 && season < 1.5) {\n    shadeDeep   = vec3f(0.88, 0.90, 0.82);\n    shadeMedium = vec3f(0.92, 0.93, 0.85);\n    shadeLight  = vec3f(0.95, 0.95, 0.88);\n    shadePale   = vec3f(0.96, 0.96, 0.92);\n    shadeBlush  = vec3f(0.93, 0.94, 0.86);\n    shadeWhite  = vec3f(0.97, 0.97, 0.94);\n    stamenGold  = vec3f(0.82, 0.78, 0.35);\n  } else if (season > 1.5 && season < 2.5) {\n    shadeDeep   = vec3f(0.52, 0.08, 0.03);\n    shadeMedium = vec3f(0.64, 0.18, 0.05);\n    shadeLight  = vec3f(0.72, 0.32, 0.07);\n    shadePale   = vec3f(0.78, 0.46, 0.12);\n    shadeBlush  = vec3f(0.68, 0.25, 0.07);\n    shadeWhite  = vec3f(0.80, 0.58, 0.20);\n    stamenGold  = vec3f(0.62, 0.42, 0.08);\n  } else if (season > 2.5) {\n    // Winter Red Holly / Plum Blossom accent dots\n    shadeDeep   = vec3f(0.70, 0.12, 0.16);\n    shadeMedium = vec3f(0.84, 0.18, 0.24);\n    shadeLight  = vec3f(0.92, 0.28, 0.32);\n    shadePale   = vec3f(0.95, 0.42, 0.46);\n    shadeBlush  = vec3f(0.88, 0.22, 0.26);\n    shadeWhite  = vec3f(0.98, 0.60, 0.64);\n    stamenGold  = vec3f(0.88, 0.75, 0.25);\n  }\n\n  var baseColor = vec3f(0.0);\n\n  if (isLeaf > 0.5) {\n    let leafTier = fract(seed * 5.17);\n    var leafBase: vec3f;\n    var leafTip: vec3f;\n    if (leafTier < 0.35) { leafBase = leafDark; leafTip = leafMedium; }\n    else if (leafTier < 0.6) { leafBase = leafMedium; leafTip = leafLight; }\n    else if (leafTier < 0.85) { leafBase = leafOlive; leafTip = leafLight; }\n    else { leafBase = leafDark; leafTip = leafOlive; }\n    baseColor = mix(leafBase, leafTip, t);\n\n    // In Winter: Top surfaces receive beautiful pure snow caps (agujas de pino cubiertas de nieve)\n    if (season > 2.5) {\n      let snowCap = smoothstep(0.15, 0.75, N.y) * (0.65 + fract(seed * 7.13) * 0.35);\n      let snowCol = vec3f(0.93, 0.95, 0.98);\n      baseColor = mix(baseColor, snowCol, snowCap * 0.82);\n      // Frost rim on leaf edge\n      baseColor = mix(baseColor, vec3f(0.86, 0.92, 0.98), t * 0.35);\n    }\n  } else if (input.isCenter > 0.5) {\n    let goldVar = fract(seed * 13.3) * 0.15;\n    let goldColor = stamenGold * (0.9 + goldVar);\n    let centerLeaf = mix(leafDark, leafMedium, fract(seed * 5.17));\n    baseColor = mix(goldColor, centerLeaf, min(season, 1.0));\n    if (season > 2.5) {\n      baseColor = mix(stamenGold, vec3f(0.92, 0.95, 0.98), 0.35);\n    }\n  } else {\n    if (season > 0.5 && season < 2.5) {\n      let leafTier2 = fract(seed * 8.13);\n      var lBase: vec3f;\n      var lTip: vec3f;\n      if (leafTier2 < 0.3) { lBase = leafDark; lTip = leafMedium; }\n      else if (leafTier2 < 0.6) { lBase = leafMedium; lTip = leafLight; }\n      else if (leafTier2 < 0.85) { lBase = leafOlive; lTip = leafLight; }\n      else { lBase = leafDark; lTip = leafOlive; }\n      baseColor = mix(lBase, lTip, t);\n    } else if (season > 2.5) {\n      // Winter snow blooms\n      let tierW = fract(seed * 7.31);\n      var pBase = vec3f(0.12, 0.24, 0.18);\n      var pTip = vec3f(0.92, 0.95, 0.98);\n      baseColor = mix(pBase, pTip, smoothstep(0.1, 0.8, t + N.y * 0.4));\n    } else {\n      let tier = fract(seed * 7.31);\n      var petalBase: vec3f;\n      var petalTip: vec3f;\n      if (tier < 0.2) { petalBase = shadeDeep; petalTip = shadeMedium; }\n      else if (tier < 0.35) { petalBase = shadeMedium; petalTip = shadeLight; }\n      else if (tier < 0.50) { petalBase = shadeLight; petalTip = shadePale; }\n      else if (tier < 0.65) { petalBase = shadeBlush; petalTip = shadePale; }\n      else if (tier < 0.80) { petalBase = shadePale; petalTip = shadeWhite; }\n      else { petalBase = shadeDeep; petalTip = shadeBlush; }\n      baseColor = mix(petalBase, petalTip, t);\n\n      let veinT = abs(t - 0.5) * 2.0;\n      let veinDarken = 1.0 - (1.0 - veinT) * 0.08;\n      baseColor = baseColor * veinDarken;\n    }\n  }\n\n  let customStrength = uniforms.customStrength;\n  if (customStrength > 0.01) {\n    let customCol = vec3f(uniforms.customR, uniforms.customG, uniforms.customB);\n    let luma = dot(baseColor, vec3f(0.299, 0.587, 0.114));\n    let baseLuma = dot(customCol, vec3f(0.299, 0.587, 0.114));\n    let lumaDelta = luma - 0.5;\n    let tinted = customCol * (0.7 + lumaDelta * 1.2) + vec3f(lumaDelta * 0.15);\n    baseColor = mix(baseColor, tinted, customStrength);\n  }\n\n  const sunDir = vec3f(-0.405616, 0.861934, -0.304212);\n  let sunColor = vec3f(1.20, 1.20, 1.20);\n  let ambient = vec3f(0.28, 0.28, 0.30);\n  let NdotL = max(dot(N, sunDir), 0.0);\n\n  let NdotLBack = max(dot(-N, sunDir), 0.0);\n  let sssColor = mix(vec3f(1.0, 0.55, 0.65), vec3f(0.6, 0.8, 0.4), isLeaf);\n  let subsurface = NdotLBack * 0.22 * sssColor;\n\n  let skyFill = vec3f(0.90, 0.85, 0.88);\n  let skyContrib = max(N.y, 0.0) * 0.12 * skyFill;\n\n  let depthDarken = mix(0.92, 1.0, fract(seed * 11.3));\n  let undersideDarken = mix(0.55, 1.0, max(N.y, 0.0)) * depthDarken;\n\n  const viewDir = vec3f(0.398015, 0.597022, 0.696526);\n  let rimDot = 1.0 - max(dot(N, viewDir), 0.0);\n  let rim = pow(rimDot, 3.0) * 0.10 * vec3f(1.0, 0.85, 0.88);\n\n  let lit = baseColor * undersideDarken * (ambient + sunColor * NdotL * 0.88) + subsurface + skyContrib + rim;\n\n  let hdr = acesFilm(lit * 1.05);\n  var ldr = pow(hdr, vec3f(1.0 / 2.2));\n\n  let gray = dot(ldr, vec3f(0.299, 0.587, 0.114));\n  ldr = mix(vec3f(gray), ldr, 1.9);\n\n  if (season < 0.5 && isLeaf < 0.5) {\n    let qrDarken = uniforms.progress * uniforms.progress;\n    let brightness = dot(ldr, vec3f(0.299, 0.587, 0.114));\n    let extraDark = mix(0.55, 0.42, smoothstep(0.5, 0.8, brightness) * customStrength);\n    ldr = ldr * mix(1.0, extraDark, qrDarken);\n  }\n\n  return vec4f(ldr, 1.0);\n}\n",
             depthWrite: true,
             depthCompare: "less"
           });
@@ -19269,37 +19269,37 @@ function _Component() {
       }} /><div style={Te.sharePopover}><div role="button" tabIndex={0} style={{
           ...Te.sharePopoverItem,
           ...(_0x32b6de === "link" ? Te.sharePopoverItemHover : {})
-        }} onMouseEnter={() => _0x44580a("link")} onMouseLeave={() => _0x44580a(null)} onClick={_0x1f6acc}><span style={Te.sharePopoverIcon}>{_0xcc6554 === "link" ? Ae.check : Ae.copyLink}</span>{_0xcc6554 === "link" ? "已复制!" : "复制链接"}</div><div role="button" tabIndex={0} style={{
+        }} onMouseEnter={() => _0x44580a("link")} onMouseLeave={() => _0x44580a(null)} onClick={_0x1f6acc}><span style={Te.sharePopoverIcon}>{_0xcc6554 === "link" ? Ae.check : Ae.copyLink}</span>{_0xcc6554 === "link" ? "¡Copiado!" : "Copiar enlace"}</div><div role="button" tabIndex={0} style={{
           ...Te.sharePopoverItem,
           ...(_0x32b6de === "download" ? Te.sharePopoverItemHover : {})
-        }} onMouseEnter={() => _0x44580a("download")} onMouseLeave={() => _0x44580a(null)} onClick={_0x228c85}><span style={Te.sharePopoverIcon}>{Ae.download}</span>Download QR</div><div style={{
+        }} onMouseEnter={() => _0x44580a("download")} onMouseLeave={() => _0x44580a(null)} onClick={_0x228c85}><span style={Te.sharePopoverIcon}>{Ae.download}</span>Descargar código QR</div><div style={{
           height: 1,
           margin: "2px 8px",
           background: "rgba(158, 142, 121, 0.15)"
         }} /><div role="button" tabIndex={0} style={{
           ...Te.sharePopoverItem,
           ...(_0x32b6de === "x" ? Te.sharePopoverItemHover : {})
-        }} onMouseEnter={() => _0x44580a("x")} onMouseLeave={() => _0x44580a(null)} onClick={_0x305892}><span style={Te.sharePopoverIcon}>{Ae.x}</span>Share on X</div><div role="button" tabIndex={0} style={{
+        }} onMouseEnter={() => _0x44580a("x")} onMouseLeave={() => _0x44580a(null)} onClick={_0x305892}><span style={Te.sharePopoverIcon}>{Ae.x}</span>Compartir en X</div><div role="button" tabIndex={0} style={{
           ...Te.sharePopoverItem,
           ...(_0x32b6de === "facebook" ? Te.sharePopoverItemHover : {})
-        }} onMouseEnter={() => _0x44580a("facebook")} onMouseLeave={() => _0x44580a(null)} onClick={_0x4d5637}><span style={Te.sharePopoverIcon}>{Ae.facebook}</span>Share on Facebook</div><div role="button" tabIndex={0} style={{
+        }} onMouseEnter={() => _0x44580a("facebook")} onMouseLeave={() => _0x44580a(null)} onClick={_0x4d5637}><span style={Te.sharePopoverIcon}>{Ae.facebook}</span>Compartir en Facebook</div><div role="button" tabIndex={0} style={{
           ...Te.sharePopoverItem,
           ...(_0x32b6de === "whatsapp" ? Te.sharePopoverItemHover : {})
-        }} onMouseEnter={() => _0x44580a("whatsapp")} onMouseLeave={() => _0x44580a(null)} onClick={_0x4a5592}><span style={Te.sharePopoverIcon}>{Ae.whatsapp}</span>Share on WhatsApp</div></div></ze.Fragment>}</div>;
+        }} onMouseEnter={() => _0x44580a("whatsapp")} onMouseLeave={() => _0x44580a(null)} onClick={_0x4a5592}><span style={Te.sharePopoverIcon}>{Ae.whatsapp}</span>Compartir en WhatsApp</div></div></ze.Fragment>}</div>;
   const _0x1ef1fa = () => {
     const raw = _0x16eae2.trim();
     if (/^https?:\/\//i.test(raw)) {
       window.open(raw, "_blank", "noopener,noreferrer");
     } else {
       navigator.clipboard?.writeText(raw).then(() => {
-        alert("已复制内容到剪贴板:\n" + raw);
+        alert("Contenido copiado al portapapeles:\n" + raw);
       }).catch(() => {
-        alert("内容:\n" + raw);
+        alert("Contenido:\n" + raw);
       });
     }
   };
   if (navigator.gpu) {
-    return <div style={Te.container}><a href="https://ppweilai.online/" target="_blank" rel="noopener noreferrer" aria-label="访问主页" style={{
+    return <div style={Te.container}><a href="https://ppweilai.online/" target="_blank" rel="noopener noreferrer" aria-label="Visitar la página principal" style={{
         ...Te.topLogoLink,
         ...(_0x175ba0 ? Te.topLogoLinkWide : {})
       }}><img src="https://ppweilai.online/assets/logo.png" alt="Logo" draggable={false} style={{
@@ -19338,10 +19338,10 @@ function _Component() {
           }}><h2 style={{
               margin: 0,
               color: "#ffffff"
-            }}>屏幕尺寸过小</h2><p style={{
+            }}>La pantalla es demasiado pequeña</h2><p style={{
               margin: "10px 0 0",
               color: "rgba(241, 245, 249, 0.9)"
-            }}>{_0x25978d ? "您可以直接打开内容链接，或使用竖屏/在更大屏幕上浏览。" : "请使用竖屏模式或在更大屏幕上浏览。"}</p>{_0x25978d && <button onClick={_0x1ef1fa} style={{
+            }}>{_0x25978d ? "Puedes abrir directamente el enlace del contenido o usar el modo vertical o una pantalla más grande." : "Usa el modo vertical o una pantalla más grande."}</p>{_0x25978d && <button onClick={_0x1ef1fa} style={{
               ...Te.visitLinkBtn,
               marginTop: 12,
               width: "min(320px, 100%)"
@@ -19349,7 +19349,7 @@ function _Component() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6
-              }}>{Ae.visit}打开分享链接</span></button>}</div></div>}</div>{!_0x535bec && <div style={{
+              }}>{Ae.visit}Abrir enlace compartido</span></button>}</div></div>}</div>{!_0x535bec && <div style={{
         ...Te.controlsOverlay,
         paddingBottom: "calc(" + (_0xd36b8b + _0x32e13e + (De ? 32 : 0)) + "px + env(safe-area-inset-bottom, 0px))"
       }}><div style={{
@@ -19370,7 +19370,7 @@ function _Component() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6
-              }}>{Ae.visit}访问链接 / 复制内容</span></button><button onClick={() => {
+              }}>{Ae.visit}Abrir enlace / Copiar contenido</span></button><button onClick={() => {
               _0x3f0c6d(false);
               if (_0xca890e.current) {
                 clearTimeout(_0xca890e.current);
@@ -19397,10 +19397,10 @@ function _Component() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6
-              }}>{Ae.generateAnother}制作新二维码</span></button></div><div style={Te.receiverRow}><button onClick={_0x146a25} aria-label={_0x1b8033 ? "开启声音" : "静音"} title={_0x1b8033 ? "开启声音" : "静音"} style={{
+              }}>{Ae.generateAnother}Crear otro código QR</span></button></div><div style={Te.receiverRow}><button onClick={_0x146a25} aria-label={_0x1b8033 ? "Activar sonido" : "Silenciar"} title={_0x1b8033 ? "Activar sonido" : "Silenciar"} style={{
               ...Te.muteBtn,
               ...(_0x1b8033 ? {} : Te.muteBtnActive)
-            }}>{_0x1b8033 ? Ae.muted : Ae.unmuted}</button>{_0x471049("分享二维码")}</div></div> : <div style={{
+            }}>{_0x1b8033 ? Ae.muted : Ae.unmuted}</button>{_0x471049("Compartir código QR")}</div></div> : <div style={{
           ...Te.inputContainer,
           ...(_0x1bb750.isMobile ? Te.inputContainerMobile : {})
         }}><div style={Te.inputRow}><input type="text" value={_0x14b306} onChange={_0x1e2206 => (_0x2dd6d3 => {
@@ -19454,7 +19454,7 @@ function _Component() {
                   }
                 })(_0x3d8a46.currentTarget.value);
               }
-            }} onFocus={() => _0x502af1(true)} onBlur={() => _0x502af1(false)} placeholder="输入任意文本、网址，或上传/粘贴二维码图片..." style={{
+            }} onFocus={() => _0x502af1(true)} onBlur={() => _0x502af1(false)} placeholder="Escribe un texto o una URL, o sube/pega una imagen de un código QR..." style={{
               ...Te.input,
               ...(_0x469f6b ? Te.inputFocused : {})
             }} autoComplete="off" autoCorrect="off" spellCheck={false} /><input ref={_qrInputRef} type="file" accept="image/*" style={{ display: "none" }} onChange={e => {
@@ -19462,10 +19462,10 @@ function _Component() {
                 _decodeQRFromImage(e.target.files[0]);
                 e.target.value = "";
               }
-            }} /><button type="button" onClick={() => _qrInputRef.current?.click()} aria-label="识别二维码图片" title="识别/上传普通二维码图片 (亦可直接截图Ctrl+V粘贴)" style={Te.scanQrBtn}>{Ae.qrScan}</button>{_0x471049("分享")}</div><div style={{
+            }} /><button type="button" onClick={() => _qrInputRef.current?.click()} aria-label="Reconocer código QR desde una imagen" title="Reconocer/subir una imagen de código QR (también puedes pegar una captura con Ctrl+V)" style={Te.scanQrBtn}>{Ae.qrScan}</button>{_0x471049("分享")}</div><div style={{
             ...Te.seasonRow,
             ...(_0x1bb750.isMobile ? Te.seasonRowMobile : {})
-          }} role="radiogroup" aria-label="季节选择器">{Ne.map(({
+          }} role="radiogroup" aria-label="Selector de estación">{Ne.map(({
               label: _0x4586a2,
               icon: _0x13ff0c
             }, _0x1786c) => <button onClick={() => _0x49fe52(_0x1786c)} role="radio" aria-checked={_0x153546 === _0x1786c} aria-label={_0x4586a2} style={{
@@ -19475,7 +19475,7 @@ function _Component() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6
-              }}>{_0x13ff0c}{_0x4586a2}</span></button>)}<button onClick={_0x146a25} aria-label={_0x1b8033 ? "Unmute" : "Mute"} title={_0x1b8033 ? "Unmute" : "Mute"} style={{
+              }}>{_0x13ff0c}{_0x4586a2}</span></button>)}<button onClick={_0x146a25} aria-label={_0x1b8033 ? "Activar sonido" : "Silenciar"} title={_0x1b8033 ? "Activar sonido" : "Silenciar"} style={{
               ...Te.muteBtn,
               ...(_0x1b8033 ? {} : Te.muteBtnActive)
             }}>{_0x1b8033 ? Ae.muted : Ae.unmuted}</button></div><div style={{
@@ -19493,9 +19493,9 @@ function _Component() {
               ...(_0x1bb750.isMobile ? Te.paletteSwatchMobile : {}),
               ...(_0x33296b === _0x2d9aad || _0x33296b === 0 && _0x2d9aad === -1 ? Te.paletteSwatchActive : {}),
               backgroundColor: _0x13972f.color
-            }} key={_0x33296b} />)}</div></div>}</div>}<div ref={_0x4efbdf} style={Te.creditsHintWrap}><a href="https://github.com/xscanzm/magic-tree-qr" target="_blank" rel="noopener noreferrer" aria-label="查看 GitHub 开源仓库" title="GitHub 开源仓库 (xscanzm/magic-tree-qr)" style={Te.githubButton}>{Ae.github}</a>{_0x2b80c3 && <div style={Te.creditsHintTooltip}><div style={Te.creditsHintArrow} /><div style={Te.creditsHintCard}><div style={{ fontWeight: 700, fontSize: 12, marginBottom: 4, color: "#3f3328" }}>3D 艺术二维码生成器</div><div style={{ color: "#6e5d4e", marginBottom: 6 }}>点击树木可俯视查看扫码二维码<br />支持春季 · 夏季 · 秋季 · 冬季</div><div style={{ borderTop: "1px solid rgba(158, 142, 121, 0.22)", paddingTop: 6, marginBottom: 6 }}><span style={{ fontWeight: 600 }}>开源仓库：</span><a href="https://github.com/xscanzm/magic-tree-qr" target="_blank" rel="noopener noreferrer" style={Te.creditsHintLink}>github.com/xscanzm/magic-tree-qr</a></div><div style={{ borderTop: "1px solid rgba(158, 142, 121, 0.15)", paddingTop: 5, display: "flex", justifyContent: "space-between", color: "#8a7a6b", fontSize: 10 }}><span>致敬 <a href="https://icqr.com" target="_blank" rel="noopener noreferrer" style={Te.creditsHintLink}>icqr</a></span><span>汉化 & 重构 <strong>xscanzm</strong></span></div></div></div>}<button type="button" aria-label="查看项目说明与开源信息" title="项目说明 & 开源信息" onClick={() => _0x23dd65(_0x3b08aa => !_0x3b08aa)} style={Te.creditsHintButton}>{Ae.info}</button></div></div>;
+            }} key={_0x33296b} />)}</div></div>}</div>}<div ref={_0x4efbdf} style={Te.creditsHintWrap}><a href="https://github.com/xscanzm/magic-tree-qr" target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio de código abierto en GitHub" title="GitHub 开源仓库 (xscanzm/magic-tree-qr)" style={Te.githubButton}>{Ae.github}</a>{_0x2b80c3 && <div style={Te.creditsHintTooltip}><div style={Te.creditsHintArrow} /><div style={Te.creditsHintCard}><div style={{ fontWeight: 700, fontSize: 12, marginBottom: 4, color: "#3f3328" }}>Generador de códigos QR artísticos en 3D</div><div style={{ color: "#6e5d4e", marginBottom: 6 }}>Haz clic en el árbol para ver el código QR desde arriba<br />Disponible en primavera · verano · otoño · invierno</div><div style={{ borderTop: "1px solid rgba(158, 142, 121, 0.22)", paddingTop: 6, marginBottom: 6 }}><span style={{ fontWeight: 600 }}>Repositorio de código abierto:</span><a href="https://github.com/xscanzm/magic-tree-qr" target="_blank" rel="noopener noreferrer" style={Te.creditsHintLink}>github.com/xscanzm/magic-tree-qr</a></div><div style={{ borderTop: "1px solid rgba(158, 142, 121, 0.15)", paddingTop: 5, display: "flex", justifyContent: "space-between", color: "#8a7a6b", fontSize: 10 }}><span>Agradecimientos a <a href="https://icqr.com" target="_blank" rel="noopener noreferrer" style={Te.creditsHintLink}>icqr</a></span><span>Traducción al español y adaptación <strong>xscanzm</strong></span></div></div></div>}<button type="button" aria-label="Ver información del proyecto y código abierto" title="Información del proyecto y código abierto" onClick={() => _0x23dd65(_0x3b08aa => !_0x3b08aa)} style={Te.creditsHintButton}>{Ae.info}</button></div></div>;
   } else {
-    return <div style={Te.container}><div style={Te.errorMessage}><h2>当前浏览器不支持 WebGPU</h2><p>本程序需要 WebGPU 支持。推荐使用最新版 Chrome、Edge 或其他支持 WebGPU 的现代浏览器。</p></div></div>;
+    return <div style={Te.container}><div style={Te.errorMessage}><h2>Este navegador no es compatible con WebGPU</h2><p>Esta aplicación necesita WebGPU. Se recomienda usar la versión más reciente de Chrome, Edge u otro navegador moderno compatible con WebGPU.</p></div></div>;
   }
 }
 var Ve = document.getElementById("root");
