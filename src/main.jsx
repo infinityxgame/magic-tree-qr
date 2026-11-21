@@ -19177,7 +19177,7 @@ function _Component() {
         return _0xsourceBlob;
       }
       // The QR scene is rendered centered; crop a square from the shorter canvas dimension.
-      const _0xside = Math.max(1, Math.floor(Math.min(_0xwidth, _0xheight) * 0.60));
+      const _0xside = Math.max(1, Math.floor(Math.min(_0xwidth, _0xheight) * 0.66));
       const _0xleft = Math.max(0, Math.floor((_0xwidth - _0xside) / 2));
       const _0xtop = Math.max(0, Math.min(_0xheight - _0xside, Math.floor((_0xheight - _0xside) / 2 - _0xheight * 0.055)));
       const _0xcropCanvas = document.createElement("canvas");
