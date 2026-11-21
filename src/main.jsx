@@ -19204,21 +19204,21 @@ function _Component() {
       return;
     }
     const _0xoriginalFlat = _0x583d98.current;
-    const _0xvideoCanvas = document.createElement("canvas");
-    _0xvideoCanvas.width = 720;
-    _0xvideoCanvas.height = 720;
-    const _0xvideoContext = _0xvideoCanvas.getContext("2d");
-    if (!_0xvideoContext) {
-      alert("No se pudo preparar el video.");
-      return;
-    }
     const _0xwidth = _0xsourceCanvas.width;
     const _0xheight = _0xsourceCanvas.height;
     const _0xside = Math.max(1, Math.floor(Math.min(_0xwidth, _0xheight) * 0.66));
     const _0xleft = Math.max(0, Math.floor((_0xwidth - _0xside) / 2));
     const _0xtop = Math.max(0, Math.min(_0xheight - _0xside, Math.floor((_0xheight - _0xside) / 2 - _0xheight * 0.055)));
-    const _0xqrImage = new Image();
-    _0xqrImage.src = _0x4457f4.current || _0x1f990f || "";
+    // Keep the source canvas resolution (up to 1440px) instead of shrinking every export to 720px.
+    const _0xvideoSize = Math.min(1440, Math.max(1080, _0xside));
+    const _0xvideoCanvas = document.createElement("canvas");
+    _0xvideoCanvas.width = _0xvideoSize;
+    _0xvideoCanvas.height = _0xvideoSize;
+    const _0xvideoContext = _0xvideoCanvas.getContext("2d", { alpha: false });
+    if (!_0xvideoContext) {
+      alert("No se pudo preparar el video.");
+      return;
+    }
     const _0xstream = _0xvideoCanvas.captureStream(30);
     const _0xmime = ["video/mp4;codecs=h264", "video/mp4", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"].find(_0xtype => MediaRecorder.isTypeSupported(_0xtype)) || "";
     let _0xrecorder;
@@ -19234,18 +19234,20 @@ function _Component() {
         _0xrecorder.onstop = () => _0xresolve(new Blob(_0xchunks, { type: _0xrecorder.mimeType || "video/webm" }));
       });
       const _0xdrawFrame = () => {
-        _0xvideoContext.drawImage(_0xsourceCanvas, _0xleft, _0xtop, _0xside, _0xside, 0, 0, 720, 720);
-        if (_0x583d98.current && _0xqrImage.complete && _0xqrImage.naturalWidth) {
-          _0xvideoContext.drawImage(_0xqrImage, _0xleft, _0xtop, _0xside, _0xside, 0, 0, 720, 720);
-        }
+        _0xvideoContext.drawImage(_0xsourceCanvas, _0xleft, _0xtop, _0xside, _0xside, 0, 0, _0xvideoSize, _0xvideoSize);
         _0xframe = requestAnimationFrame(_0xdrawFrame);
       };
-      if (_0xoriginalFlat) _0x1d6f82();
-      await new Promise(_0xresolve => setTimeout(_0xresolve, 250));
+      // Always begin with the 3D tree, then let the real WebGPU scene animate into its QR state.
+      if (_0xoriginalFlat) {
+        _0x1d6f82();
+        await new Promise(_0xresolve => setTimeout(_0xresolve, 500));
+      }
       _0xdrawFrame();
       _0xrecorder.start(100);
       await new Promise(_0xresolve => setTimeout(_0xresolve, 2000));
       _0x1d6f82();
+      // Allow the tree-to-QR morph to finish, then hold the completed QR for four seconds.
+      await new Promise(_0xresolve => setTimeout(_0xresolve, 1500));
       await new Promise(_0xresolve => setTimeout(_0xresolve, 4000));
       if (_0xrecorder.state !== "inactive") _0xrecorder.stop();
       const _0xblob = await _0xfinished;
