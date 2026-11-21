@@ -19171,40 +19171,22 @@ function _Component() {
         _0ximage.onerror = _0xreject;
         _0ximage.src = _0ximageUrl;
       });
+      const _0xwidth = _0ximage.naturalWidth;
+      const _0xheight = _0ximage.naturalHeight;
+      if (!_0xwidth || !_0xheight) {
+        return _0xsourceBlob;
+      }
+      // The QR scene is rendered centered; crop a square from the shorter canvas dimension.
+      const _0xside = Math.max(1, Math.floor(Math.min(_0xwidth, _0xheight) * 0.78));
+      const _0xleft = Math.max(0, Math.floor((_0xwidth - _0xside) / 2));
+      const _0xtop = Math.max(0, Math.floor((_0xheight - _0xside) / 2));
       const _0xcropCanvas = document.createElement("canvas");
-      const _0xcropContext = _0xcropCanvas.getContext("2d", { willReadFrequently: true });
+      _0xcropCanvas.width = _0xside;
+      _0xcropCanvas.height = _0xside;
+      const _0xcropContext = _0xcropCanvas.getContext("2d");
       if (!_0xcropContext) {
         return _0xsourceBlob;
       }
-      const _0xwidth = _0ximage.naturalWidth;
-      const _0xheight = _0ximage.naturalHeight;
-      _0xcropCanvas.width = _0xwidth;
-      _0xcropCanvas.height = _0xheight;
-      _0xcropContext.drawImage(_0ximage, 0, 0);
-      const _0ximageData = _0xcropContext.getImageData(0, 0, _0xwidth, _0xheight);
-      const _0xdecoded = jsQR(_0ximageData.data, _0xwidth, _0xheight, { inversionAttempts: "attemptBoth" });
-      if (!_0xdecoded?.location) {
-        return _0xsourceBlob;
-      }
-      const _0xpoints = [
-        _0xdecoded.location.topLeftCorner,
-        _0xdecoded.location.topRightCorner,
-        _0xdecoded.location.bottomLeftCorner,
-        _0xdecoded.location.bottomRightCorner
-      ];
-      const _0xminX = Math.min(..._0xpoints.map(_0xpoint => _0xpoint.x));
-      const _0xminY = Math.min(..._0xpoints.map(_0xpoint => _0xpoint.y));
-      const _0xmaxX = Math.max(..._0xpoints.map(_0xpoint => _0xpoint.x));
-      const _0xmaxY = Math.max(..._0xpoints.map(_0xpoint => _0xpoint.y));
-      const _0xqrSide = Math.max(_0xmaxX - _0xminX, _0xmaxY - _0xminY);
-      const _0xpadding = Math.ceil(_0xqrSide * 0.08);
-      const _0xside = Math.min(Math.ceil(_0xqrSide + _0xpadding * 2), _0xwidth, _0xheight);
-      const _0xcenterX = (_0xminX + _0xmaxX) / 2;
-      const _0xcenterY = (_0xminY + _0xmaxY) / 2;
-      const _0xleft = Math.max(0, Math.min(_0xwidth - _0xside, Math.round(_0xcenterX - _0xside / 2)));
-      const _0xtop = Math.max(0, Math.min(_0xheight - _0xside, Math.round(_0xcenterY - _0xside / 2)));
-      _0xcropCanvas.width = _0xside;
-      _0xcropCanvas.height = _0xside;
       _0xcropContext.drawImage(_0ximage, _0xleft, _0xtop, _0xside, _0xside, 0, 0, _0xside, _0xside);
       return await new Promise(_0xresolve => _0xcropCanvas.toBlob(_0xresolve, "image/png")) || _0xsourceBlob;
     } catch {
