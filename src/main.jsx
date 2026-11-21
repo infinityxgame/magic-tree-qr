@@ -18406,7 +18406,7 @@ function _Component() {
           }
           const _0x2cc8ca = await _0x1e2627.requestDevice();
           const _0x1614a7 = navigator.gpu.getPreferredCanvasFormat();
-          const _0x2635ba = Math.min(window.devicePixelRatio || 1, 2);
+          const _0x2635ba = Math.min(window.devicePixelRatio || 1, 3);
           _0x3965a8.width = Math.max(1, Math.floor(_0x99bdef * _0x2635ba));
           _0x3965a8.height = Math.max(1, Math.floor(_0xf44ff4 * _0x2635ba));
           _0x3f70a1.configure({
@@ -19068,7 +19068,7 @@ function _Component() {
       if (_0x45bb31 && _0x5c9186) {
         if (!(_0x1b3318 <= 0) && !(_0x1f69fa <= 0)) {
           (function (_0x82808b, _0x5deeb4, _0x14b74c, _0x4a6a56) {
-            const _0x141c8b = Math.min(window.devicePixelRatio || 1, 2);
+            const _0x141c8b = Math.min(window.devicePixelRatio || 1, 3);
             const _0x40cedb = Math.max(1, Math.floor(_0x14b74c * _0x141c8b));
             const _0x53e645 = Math.max(1, Math.floor(_0x4a6a56 * _0x141c8b));
             if (_0x5deeb4.width === _0x40cedb && _0x5deeb4.height === _0x53e645) {
