@@ -17781,6 +17781,30 @@ var Me = [{
   label: "Blanco nieve",
   color: "#dfe6e9",
   rgb: [0.87, 0.9, 0.91]
+}, {
+  label: "Verde esmeralda",
+  color: "#20a879",
+  rgb: [0.08, 0.66, 0.47]
+}, {
+  label: "Turquesa",
+  color: "#22b8b0",
+  rgb: [0.05, 0.72, 0.69]
+}, {
+  label: "Azul noche",
+  color: "#344b9b",
+  rgb: [0.16, 0.22, 0.61]
+}, {
+  label: "Fucsia",
+  color: "#d94b9b",
+  rgb: [0.82, 0.15, 0.52]
+}, {
+  label: "Naranja",
+  color: "#f08a35",
+  rgb: [0.94, 0.39, 0.08]
+}, {
+  label: "Negro carbón",
+  color: "#41454b",
+  rgb: [0.20, 0.22, 0.25]
 }];
 var Le = {
   xmlns: "http://www.w3.org/2000/svg",
@@ -17867,7 +17891,7 @@ function Fe(_0x49e8af) {
     return {
       url: _0x1cdc4e,
       season: Math.min(3, Math.max(0, _0x528591)),
-      palette: Math.min(5, Math.max(-1, _0x12eb57))
+      palette: Math.min(11, Math.max(-1, _0x12eb57))
     };
   } else {
     return null;
@@ -17943,7 +17967,7 @@ function _Component() {
       return {
         url: _0x52f5fb,
         season: Number.isFinite(_0x5f2662) ? Math.min(3, Math.max(0, _0x5f2662)) : typeof _0x162db9.season == "number" ? Math.min(3, Math.max(0, _0x162db9.season)) : 1,
-        palette: Number.isFinite(_0x168318) ? Math.min(5, Math.max(-1, _0x168318)) : typeof _0x162db9.palette == "number" ? Math.min(5, Math.max(-1, _0x162db9.palette)) : -1,
+        palette: Number.isFinite(_0x168318) ? Math.min(11, Math.max(-1, _0x168318)) : typeof _0x162db9.palette == "number" ? Math.min(11, Math.max(-1, _0x162db9.palette)) : -1,
         muted: typeof _0x162db9.muted != "boolean" || _0x162db9.muted,
         sharedMode: _0x2003ad
       };
@@ -18184,7 +18208,7 @@ function _Component() {
     }
   }, []);
   _0x3129c7.current = _0x153546;
-  if (_0x2d9aad <= 0 || _0x153546 !== 0) {
+  if (_0x2d9aad <= 0 || (_0x153546 !== 0 && _0x153546 !== 3)) {
     _0x5bd40a.current = [0, 0, 0, 0];
   } else {
     const _0x4d37f5 = Me[_0x2d9aad];
