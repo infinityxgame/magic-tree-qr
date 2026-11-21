@@ -19197,6 +19197,78 @@ function _Component() {
       }
     }
   }, [_0x1f990f]);
+  const _0xcreateShareVideo = async () => {
+    const _0xsourceCanvas = _0x280204.current;
+    if (!_0xsourceCanvas || typeof MediaRecorder === "undefined" || !_0xsourceCanvas.captureStream) {
+      alert("Este navegador no permite crear videos desde el árbol.");
+      return;
+    }
+    const _0xoriginalFlat = _0x583d98.current;
+    const _0xvideoCanvas = document.createElement("canvas");
+    _0xvideoCanvas.width = 720;
+    _0xvideoCanvas.height = 720;
+    const _0xvideoContext = _0xvideoCanvas.getContext("2d");
+    if (!_0xvideoContext) {
+      alert("No se pudo preparar el video.");
+      return;
+    }
+    const _0xwidth = _0xsourceCanvas.width;
+    const _0xheight = _0xsourceCanvas.height;
+    const _0xside = Math.max(1, Math.floor(Math.min(_0xwidth, _0xheight) * 0.66));
+    const _0xleft = Math.max(0, Math.floor((_0xwidth - _0xside) / 2));
+    const _0xtop = Math.max(0, Math.min(_0xheight - _0xside, Math.floor((_0xheight - _0xside) / 2 - _0xheight * 0.055)));
+    const _0xstream = _0xvideoCanvas.captureStream(30);
+    const _0xmime = ["video/mp4;codecs=h264", "video/mp4", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"].find(_0xtype => MediaRecorder.isTypeSupported(_0xtype)) || "";
+    let _0xrecorder;
+    let _0xframe;
+    try {
+      _0xrecorder = new MediaRecorder(_0xstream, _0xmime ? { mimeType: _0xmime } : undefined);
+      const _0xchunks = [];
+      const _0xfinished = new Promise((_0xresolve, _0xreject) => {
+        _0xrecorder.ondataavailable = _0xevent => {
+          if (_0xevent.data && _0xevent.data.size) _0xchunks.push(_0xevent.data);
+        };
+        _0xrecorder.onerror = () => _0xreject(new Error("No se pudo grabar el video."));
+        _0xrecorder.onstop = () => _0xresolve(new Blob(_0xchunks, { type: _0xrecorder.mimeType || "video/webm" }));
+      });
+      const _0xdrawFrame = () => {
+        _0xvideoContext.drawImage(_0xsourceCanvas, _0xleft, _0xtop, _0xside, _0xside, 0, 0, 720, 720);
+        _0xframe = requestAnimationFrame(_0xdrawFrame);
+      };
+      if (_0xoriginalFlat) _0x1d6f82();
+      await new Promise(_0xresolve => setTimeout(_0xresolve, 250));
+      _0xdrawFrame();
+      _0xrecorder.start(100);
+      await new Promise(_0xresolve => setTimeout(_0xresolve, 2000));
+      _0x1d6f82();
+      await new Promise(_0xresolve => setTimeout(_0xresolve, 4000));
+      if (_0xrecorder.state !== "inactive") _0xrecorder.stop();
+      const _0xblob = await _0xfinished;
+      const _0xextension = _0xblob.type.includes("mp4") ? "mp4" : "webm";
+      const _0xfilename = "tree-qr-video." + _0xextension;
+      const _0xfile = new File([_0xblob], _0xfilename, { type: _0xblob.type });
+      if (navigator.share && navigator.canShare?.({ files: [_0xfile] })) {
+        await navigator.share({ files: [_0xfile], title: "Árbol y código QR" }).catch(() => {});
+      } else {
+        const _0xurl = URL.createObjectURL(_0xblob);
+        const _0xlink = document.createElement("a");
+        _0xlink.href = _0xurl;
+        _0xlink.download = _0xfilename;
+        _0xlink.click();
+        setTimeout(() => URL.revokeObjectURL(_0xurl), 1500);
+      }
+      _0xdd5148(false);
+      _0x44580a(null);
+    } catch (_0xerror) {
+      console.error(_0xerror);
+      alert("No se pudo crear el video. Inténtalo de nuevo en otro navegador.");
+    } finally {
+      if (_0xframe) cancelAnimationFrame(_0xframe);
+      if (_0xrecorder && _0xrecorder.state !== "inactive") _0xrecorder.stop();
+      _0xstream.getTracks().forEach(_0xtrack => _0xtrack.stop());
+      if (_0x583d98.current !== _0xoriginalFlat) _0x1d6f82();
+    }
+  };
   const _0x274176 = async () => {
     if (("ontouchstart" in window || navigator.maxTouchPoints > 0) && navigator.share) {
       const _0xdc862d = _0x572d25();
@@ -19329,7 +19401,7 @@ function _Component() {
         }} onMouseEnter={() => _0x44580a("link")} onMouseLeave={() => _0x44580a(null)} onClick={_0x1f6acc}><span style={Te.sharePopoverIcon}>{_0xcc6554 === "link" ? Ae.check : Ae.copyLink}</span>{_0xcc6554 === "link" ? "¡Copiado!" : "Copiar enlace"}</div><div role="button" tabIndex={0} style={{
           ...Te.sharePopoverItem,
           ...(_0x32b6de === "download" ? Te.sharePopoverItemHover : {})
-        }} onMouseEnter={() => _0x44580a("download")} onMouseLeave={() => _0x44580a(null)} onClick={_0x228c85}><span style={Te.sharePopoverIcon}>{Ae.download}</span>Descargar código QR</div><div style={{
+        }} onMouseEnter={() => _0x44580a("download")} onMouseLeave={() => _0x44580a(null)} onClick={_0x228c85}><span style={Te.sharePopoverIcon}>{Ae.download}</span>Descargar código QR</div><div role="button" tabIndex={0} style={Te.sharePopoverItem} onClick={_0xcreateShareVideo}><span style={Te.sharePopoverIcon}>{Ae.download}</span>Crear video del árbol y QR</div><div style={{
           height: 1,
           margin: "2px 8px",
           background: "rgba(158, 142, 121, 0.15)"
