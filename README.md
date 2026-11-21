@@ -1,76 +1,76 @@
-# 🌲 3D 艺术二维码生成器 (Magic Tree QR)
+# 🌲 Generador de códigos QR artísticos en 3D (Magic Tree QR)
 
-> 基于 **WebGPU** 和 **React** 的高性能 3D 体素艺术二维码生成器。将任意网址、文本或内容转化为生长摇曳的四季 3D 魔法树，支持真实扫码识别、二维码图片截图识别解析与四季沉浸式视听体验。
+> Generador de códigos QR artísticos en 3D de vóxeles de alto rendimiento basado en **WebGPU** y **React**.Convierte cualquier URL, texto o contenido en un árbol mágico 3D de las cuatro estaciones que crece y se balancea. Es compatible con el reconocimiento real mediante escaneo de códigos QR, el reconocimiento y análisis de capturas de pantalla de códigos QR y una experiencia audiovisual inmersiva de las cuatro estaciones.
 
-🌐 **在线体验**：[https://tree.ppweilai.online/](https://tree.ppweilai.online/)
-
----
-
-## ✨ 核心特性
-
-- 🌲 **WebGPU 极速体素渲染**：基于原生 WebGPU 与 WGSL 着色器管线，毫秒级实时演算三维体素树木、分形枝干、万片树叶与微风扰动物理系统。
-- 🌸 **完整四季视觉主题**：
-  - **🌸 春季（Spring）**：漫天粉红樱花花海，伴随轻盈落樱飞舞与和风呢喃；
-  - **🍃 夏季（Summer）**：郁郁葱葱的深绿树冠，伴有林间光斑与 10 只翩翩起舞的蝴蝶；
-  - **🍁 秋季（Autumn）**：层林尽染的金黄红叶，带有地面湿润反光与连绵秋雨涟漪；
-  - **❄️ 冬季（Winter）**：雅致的雪覆苍松、霜晶雾凇与冬青红梅点缀，伴随漫天旋转飘洒的鹅毛大雪。
-- 📷 **全能二维码识别与生成**：
-  - **文本/网址输入**：支持任意长度文本、UTF-8 字符及网址生成二维码；
-  - **传图识别**：内置 jsQR 纯前端引擎，点击相机图标即可选择二维码图片秒级解析；
-  - **截图粘贴（Ctrl+V）**：无需保存文件，微信/系统截图后直接在页面按 `Ctrl+V` 一键生成；
-  - **拖拽支持**：拖入二维码图片文件直接解析。
-- 🎯 **3D / 2D 双视角无缝切换**：
-  - 点击 3D 树木即可平滑过渡至正上方 2D 视角，高对比度保证 **100% 扫码识别率**；
-  - 再次点击无缝回归 3D 沉浸式观赏视角。
-- 🎨 **丰富配色调色板**：支持默认配色与薰衣草紫、珊瑚红、金黄、天蓝、雪白等自定义主题色彩。
-- 🎵 **四季环境音效**：内置专属于春夏秋冬的白噪音与沉浸式背景音乐。
+🌐 **Experiencia en línea**:[ https://tree.ppweilai.online/](https://tree.ppweilai.online/)
 
 ---
 
-## 🛠️ 技术栈
+## ✨ Características principales
 
-- **构建工具**：[Vite](https://vitejs.dev/)
-- **前端框架**：[React 19](https://react.dev/)
-- **图形渲染**：[WebGPU](https://www.w3.org/TR/webgpu/) / [WGSL Shaders](https://www.w3.org/TR/WGSL/)
-- **二维码编解码**：`qrcode` / `jsqr`
-- **部署平台**：Cloudflare Pages / Workers
+- 🌲 **Renderizado de vóxeles ultrarrápido con WebGPU**: basado en WebGPU nativo y el pipeline de sombreado WGSL, calcula en tiempo real, en milisegundos, árboles de vóxeles tridimensionales, ramas fractales, miles de hojas y un sistema físico de perturbación por la brisa.
+- 🌸 **Temas visuales completos para las cuatro estaciones**:
+   - **🌸 Primavera (Spring)**: Un mar de flores de cerezo rosas que cubren el cielo, acompañado de pétalos de cerezo que caen suavemente y del susurro de la brisa;
+   - **🍃 Verano (Summer)**: Copas de árboles de un verde intenso y exuberante, acompañadas de destellos de luz entre los árboles y 10 mariposas danzantes;
+   - **🍁 Otoño:** Hojas doradas y rojas que tiñen los bosques, con reflejos del suelo húmedo y ondulaciones de la lluvia otoñal continua;
+   - **❄️ Invierno:** elegantes pinos cubiertos de nieve, escarcha cristalina y ciruelos rojos de acebo, acompañados de una intensa nevada que gira y cae por todo el cielo.
+- 📷 **Reconocimiento y generación de códigos QR versátiles**:
+   - **Introducción de texto/URL**: admite la generación de códigos QR a partir de texto de cualquier longitud, caracteres UTF-8 y URL;
+   - **Reconocimiento de imágenes cargadas**: con el motor frontend puro jsQR integrado, basta con hacer clic en el ícono de la cámara para seleccionar una imagen de código QR y obtener su análisis en cuestión de segundos;
+   - **Pegar captura de pantalla (Ctrl+V)**: no es necesario guardar el archivo; después de hacer una captura de pantalla en WeChat o en el sistema, simplemente presione `Ctrl+V` en la página para generarla con un solo clic;
+   - **Compatibilidad con arrastrar y soltar**: arrastre el archivo de imagen del código QR para analizarlo directamente.
+- 🎯 **Cambio fluido entre las vistas 3D y 2D**:
+   - Al hacer clic en el árbol 3D, se realiza una transición suave a la vista 2D directamente encima. El alto contraste garantiza **una tasa de reconocimiento del 100 % al escanear el código QR**;
+   - Vuelva a hacer clic para regresar sin problemas a la vista de visualización inmersiva en 3D.
+- 🎨 **Amplia paleta de colores**: admite la combinación de colores predeterminada y colores de temas personalizados como púrpura lavanda, rojo coral, amarillo dorado, azul cielo, blanco nieve, etc.
+- 🎵 **Sonidos ambientales de las cuatro estaciones**: ruido blanco integrado específico para la primavera, el verano, el otoño y el invierno, así como música de fondo inmersiva.
 
 ---
 
-## 🚀 本地开发与运行
+## 🛠️ Stack tecnológico
 
-### 1. 克隆项目
+- **Herramienta de compilación**:[Vite](https://vitejs.dev/)
+- **Framework frontend**:[ React 19](https://react.dev/)
+- **Renderizado gráfico**:[ WebGPU](https://www.w3.org/TR/webgpu/)/[WGSL Shaders](https://www.w3.org/TR/WGSL/)
+- **Codificación y decodificación de códigos QR**:`qrcode` / `jsqr`
+- **Plataforma de implementación**: Cloudflare Pages / Workers
+
+---
+
+## 🚀 Desarrollo y ejecución locales
+
+### 1. Clonar el proyecto
 ```bash
 git clone https://github.com/xscanzm/magic-tree-qr.git
 cd magic-tree-qr
 ```
 
-### 2. 安装依赖
+### 2. Instalar las dependencias
 ```bash
 npm install
 ```
 
-### 3. 启动开发服务器
+### 3. Iniciar el servidor de desarrollo
 ```bash
 npm run dev
 ```
-打开浏览器访问 `http://localhost:3000` 即可体验。
+Abra el navegador y visite `http://localhost:3000` para probarlo.
 
-### 4. 生产打包
+### 4. Empaquetado de producción
 ```bash
 npm run build
 ```
-编译产物将输出至 `dist/` 目录。
+Los resultados de la compilación se enviarán al directorio `dist/`.
 
 ---
 
-## 📜 致敬与鸣谢
+## 📜 Reconocimientos y agradecimientos
 
-- 致敬：[icqr](https://icqr.com)
-- 汉化与冬季重构：[xscanzm](https://github.com/xscanzm)
+- Reconocimiento:[ icqr](https://icqr.com)
+- Traducción al chino y reestructuración de invierno:[xscanzm](https://github.com/xscanzm)
 
 ---
 
-## 📄 开源许可证
+## 📄 Licencia de código abierto
 
-本项目基于 [MIT License](LICENSE) 开源。
+Este proyecto es de código abierto bajo la [Licencia MIT](LICENSE).
