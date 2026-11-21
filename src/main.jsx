@@ -19160,10 +19160,64 @@ function _Component() {
     if (!_0x4755e1) {
       return null;
     }
+    let _0xsourceBlob;
     try {
-      return await (await fetch(_0x4755e1)).blob();
+      _0xsourceBlob = await (await fetch(_0x4755e1)).blob();
+      const _0ximageUrl = URL.createObjectURL(_0xsourceBlob);
+      const _0ximage = new Image();
+      try {
+        await new Promise((_0xresolve, _0xreject) => {
+          _0ximage.onload = _0xresolve;
+          _0ximage.onerror = _0xreject;
+          _0ximage.src = _0ximageUrl;
+        });
+      } finally {
+        URL.revokeObjectURL(_0ximageUrl);
+      }
+      const _0xcropCanvas = document.createElement("canvas");
+      const _0xcropContext = _0xcropCanvas.getContext("2d", { willReadFrequently: true });
+      if (!_0xcropContext) {
+        return _0xsourceBlob;
+      }
+      _0xcropCanvas.width = _0ximage.naturalWidth;
+      _0xcropCanvas.height = _0ximage.naturalHeight;
+      _0xcropContext.drawImage(_0ximage, 0, 0);
+      const _0xpixels = _0xcropContext.getImageData(0, 0, _0cropCanvas.width, _0cropCanvas.height);
+      let _0xminX = _0xpixels.width;
+      let _0xminY = _0xpixels.height;
+      let _0xmaxX = -1;
+      let _0xmaxY = -1;
+      for (let _0xy = 0; _0xy < _0xpixels.height; _0xy++) {
+        for (let _0xx = 0; _0xx < _0xpixels.width; _0xx++) {
+          const _0xoffset = (_0xy * _0xpixels.width + _0xx) * 4;
+          const _0xred = _0xpixels.data[_0xoffset];
+          const _0xgreen = _0xpixels.data[_0xoffset + 1];
+          const _0xblue = _0xpixels.data[_0xoffset + 2];
+          if (Math.max(Math.abs(_0xred - 246), Math.abs(_0xgreen - 241), Math.abs(_0xblue - 231)) > 28) {
+            _0xminX = Math.min(_0xminX, _0xx);
+            _0xminY = Math.min(_0xminY, _0xy);
+            _0xmaxX = Math.max(_0xmaxX, _0xx);
+            _0xmaxY = Math.max(_0xmaxY, _0xy);
+          }
+        }
+      }
+      if (_0xmaxX < _0xminX || _0xmaxY < _0xminY) {
+        return _0xsourceBlob;
+      }
+      const _0xqrWidth = _0xmaxX - _0xminX + 1;
+      const _0xqrHeight = _0xmaxY - _0xminY + 1;
+      const _0xpadding = Math.ceil(Math.max(_0xqrWidth, _0xqrHeight) * 0.08);
+      const _0xside = Math.min(Math.max(_0xqrWidth, _0xqrHeight) + _0xpadding * 2, _0xpixels.width, _0xpixels.height);
+      const _0xcenterX = (_0xminX + _0xmaxX) / 2;
+      const _0xcenterY = (_0xminY + _0xmaxY) / 2;
+      const _0xleft = Math.max(0, Math.min(_0xpixels.width - _0xside, Math.round(_0xcenterX - _0xside / 2)));
+      const _0xtop = Math.max(0, Math.min(_0xpixels.height - _0xside, Math.round(_0xcenterY - _0xside / 2)));
+      _0xcropCanvas.width = _0xside;
+      _0xcropCanvas.height = _0xside;
+      _0xcropContext.drawImage(_0ximage, _0xleft, _0xtop, _0xside, _0xside, 0, 0, _0xside, _0xside);
+      return await new Promise(_0xresolve => _0xcropCanvas.toBlob(_0xresolve, "image/png")) || _0xsourceBlob;
     } catch {
-      return null;
+      return _0xsourceBlob || null;
     }
   }, [_0x1f990f]);
   const _0x274176 = async () => {
@@ -19204,14 +19258,16 @@ function _Component() {
     _0x44580a(null);
   };
   const _0x228c85 = async () => {
-    const _0x4ad5b9 = _0x4457f4.current || _0x1f990f;
+    const _0x4ad5b9 = await _0x4694ab();
     if (!_0x4ad5b9) {
       return;
     }
+    const _0xdownloadUrl = URL.createObjectURL(_0x4ad5b9);
     const _0x10f4af = document.createElement("a");
-    _0x10f4af.href = _0x4ad5b9;
+    _0x10f4af.href = _0xdownloadUrl;
     _0x10f4af.download = "tree-qr.png";
     _0x10f4af.click();
+    setTimeout(() => URL.revokeObjectURL(_0xdownloadUrl), 1000);
     _0xdd5148(false);
     _0x44580a(null);
   };
