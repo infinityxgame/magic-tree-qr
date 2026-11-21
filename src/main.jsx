@@ -19209,8 +19209,8 @@ function _Component() {
     const _0xside = Math.max(1, Math.floor(Math.min(_0xwidth, _0xheight) * 0.66));
     const _0xleft = Math.max(0, Math.floor((_0xwidth - _0xside) / 2));
     const _0xtop = Math.max(0, Math.min(_0xheight - _0xside, Math.floor((_0xheight - _0xside) / 2 - _0xheight * 0.055)));
-    // Keep the source canvas resolution (up to 1440px) instead of shrinking every export to 720px.
-    const _0xvideoSize = Math.min(1440, Math.max(1080, _0xside));
+    // Preserve the actual source crop resolution (up to 1440px); avoid both forced downscaling and artificial upscaling.
+    const _0xvideoSize = Math.min(1440, _0xside);
     const _0xvideoCanvas = document.createElement("canvas");
     _0xvideoCanvas.width = _0xvideoSize;
     _0xvideoCanvas.height = _0xvideoSize;
