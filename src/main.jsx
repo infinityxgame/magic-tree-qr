@@ -19217,6 +19217,8 @@ function _Component() {
     const _0xside = Math.max(1, Math.floor(Math.min(_0xwidth, _0xheight) * 0.66));
     const _0xleft = Math.max(0, Math.floor((_0xwidth - _0xside) / 2));
     const _0xtop = Math.max(0, Math.min(_0xheight - _0xside, Math.floor((_0xheight - _0xside) / 2 - _0xheight * 0.055)));
+    const _0xqrImage = new Image();
+    _0xqrImage.src = _0x4457f4.current || _0x1f990f || "";
     const _0xstream = _0xvideoCanvas.captureStream(30);
     const _0xmime = ["video/mp4;codecs=h264", "video/mp4", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"].find(_0xtype => MediaRecorder.isTypeSupported(_0xtype)) || "";
     let _0xrecorder;
@@ -19233,6 +19235,9 @@ function _Component() {
       });
       const _0xdrawFrame = () => {
         _0xvideoContext.drawImage(_0xsourceCanvas, _0xleft, _0xtop, _0xside, _0xside, 0, 0, 720, 720);
+        if (_0x583d98.current && _0xqrImage.complete && _0xqrImage.naturalWidth) {
+          _0xvideoContext.drawImage(_0xqrImage, _0xleft, _0xtop, _0xside, _0xside, 0, 0, 720, 720);
+        }
         _0xframe = requestAnimationFrame(_0xdrawFrame);
       };
       if (_0xoriginalFlat) _0x1d6f82();
